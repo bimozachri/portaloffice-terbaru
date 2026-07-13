@@ -1,12 +1,31 @@
+'use client';
+
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Lock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 export default function AbafIntegratedPage() {
-  // TODO: Masukkan URL Web App Google Apps Script untuk ABAF di sini
-  const urlAbaf: string = "https://script.google.com/macros/s/AKfycbyAweLzcXatL2bCrejCSnkHbAtDPivfc08F5MevkS30sP8t4HYpe04Nx9MtxJd3dQ8X/exec"; 
+  // State untuk mengontrol akses dan input form
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState(false);
+
+  // Link GAS ABAF
+  const urlAbaf: string = "https://script.google.com/macros/s/AKfycbyAweLzcXatL2bCrejCSnkHbAtDPivfc08F5MevkS30sP8t4HYpe04Nx9MtxJd3dQ8X/exec";
+
+  // Fungsi untuk mengecek password saat tombol diklik
+  const handleLogin = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (password === "admin") {
+      setIsAuthenticated(true);
+      setError(false);
+    } else {
+      setError(true);
+    }
+  };
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
@@ -39,23 +58,63 @@ export default function AbafIntegratedPage() {
         </div>
       </div>
 
-      {/* Embedded Content */}
-      <div className="flex-1 w-full relative">
-        {urlAbaf !== "" ? (
-          <iframe
-            src={urlAbaf}
-            frameBorder="0"
-            width="100%"
-            height="1000px"
-            title="Sistem ABAF Integrated"
-            allow="clipboard-write; clipboard-read; autoplay"
-          />
-        ) : (
-          <div className="absolute inset-0 flex items-center justify-center">
-            <span className="text-muted-foreground font-medium bg-background px-4 py-2 rounded-lg border border-border shadow-sm">
-              Link sistem ABAF belum dikonfigurasi.
-            </span>
+      {/* Content Area */}
+      <div className="flex-1 w-full relative flex flex-col">
+        
+        {/* Kondisi: Jika BELUM auth, tampilkan form password. Jika SUDAH, tampilkan iframe */}
+        {!isAuthenticated ? (
+          
+          <div className="flex-1 flex items-center justify-center p-4">
+            <div className="w-full max-w-sm bg-card border border-border rounded-xl shadow-sm p-6 sm:p-8 text-center">
+              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Lock className="w-6 h-6 text-primary" />
+              </div>
+              <h2 className="text-xl font-semibold text-card-foreground mb-2">Halaman Terkunci</h2>
+              <p className="text-sm text-muted-foreground mb-6">
+                Silakan masukkan password untuk mengakses sistem ABAF.
+              </p>
+              
+              <form onSubmit={handleLogin} className="space-y-4">
+                <div>
+                  <input
+                    type="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    placeholder="Masukkan password..."
+                    // Styling input disamakan dengan gaya shadcn/ui
+                    className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                  />
+                  {error && (
+                    <p className="text-sm text-destructive mt-2 text-left">Password salah, silakan coba lagi.</p>
+                  )}
+                </div>
+                <Button type="submit" className="w-full">
+                  Buka Akses
+                </Button>
+              </form>
+            </div>
           </div>
+
+        ) : (
+          
+          /* Iframe muncul HANYA jika password benar */
+          urlAbaf !== "" ? (
+            <iframe
+              src={urlAbaf}
+              frameBorder="0"
+              width="100%"
+              height="1000px"
+              title="Sistem ABAF Integrated"
+              allow="clipboard-write; clipboard-read; autoplay"
+            />
+          ) : (
+            <div className="absolute inset-0 flex items-center justify-center">
+              <span className="text-muted-foreground font-medium bg-background px-4 py-2 rounded-lg border border-border shadow-sm">
+                Link sistem ABAF belum dikonfigurasi.
+              </span>
+            </div>
+          )
+
         )}
       </div>
     </div>

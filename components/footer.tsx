@@ -55,7 +55,12 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdHE9boh7qmdnXPyvQvjQ3iLvoczltk482hDUJTVM_CiTtP5A/viewform" className="hover:text-primary transition-colors">
+                <a href="/abaf-integrated" className="hover:text-primary transition-colors">
+                  ABAF Integrated
+                </a>
+              </li>
+              <li>
+                <a href="/form-lembur" className="hover:text-primary transition-colors">
                   Form Lembur
                 </a>
               </li>

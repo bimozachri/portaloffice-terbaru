@@ -11,10 +11,11 @@ const layananDropdown = [
   { name: "Form Pengajuan No. Surat", href: "/form-pengajuan-no-surat" },
   { name: "Form Klaim Operasional", href: "/form-klaim-operasional" },
   { name: "Form Perjalanan Dinas", href: "/form-perjalanan-dinas" },
-  { name: "Form Lembur", href: "https://docs.google.com/forms/d/e/1FAIpQLSdHE9boh7qmdnXPyvQvjQ3iLvoczltk482hDUJTVM_CiTtP5A/viewform" },
-  { name: "Form Pengajuan Cuti", href: "https://docs.google.com/forms/d/e/1FAIpQLSdeO6fNTDfSp7Gm8v4hTjCsNItfkqL0I18eCkuc8gr2KitR8A/viewform" },
-  { name: "Form Izin Sakit", href: "https://docs.google.com/forms/d/e/1FAIpQLSdf5xaPhmA-UP1QQ-jFTZhGqc_KHh644utBIkzQwumWiLoIEQ/viewform" },
-  { name: "Dezavasi's Sales Form App", href: "https://docs.google.com/forms/d/e/1FAIpQLSewbtzCYbBgxQfgmeRme2QKK4e42m9ePhpEf25Q6MlHBB85JQ/viewform" },
+  { name: "ABAF Integrated", href: "/abaf-integrated" },
+  { name: "Form Lembur", href: "/form-lembur" },
+  { name: "Form Pengajuan Cuti", href: "/form-pengajuan-cuti" },
+  { name: "Form Izin Sakit", href: "/form-izin-sakit" },
+  { name: "Dezavasi's Sales Form App", href: "/form-sales" },
 ]
 
 const videoDropdown = [
