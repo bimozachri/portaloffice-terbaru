@@ -27,7 +27,7 @@ const spdMenus = [
     description: "Gunakan sepeda motor pribadi untuk dinas.",
     icon: Bike,
     href: "/form-perjalanan-dinas/motor-pribadi",
-    color: "accent" as const,
+    color: "primary" as const,
     buttonText: "Buka Form"
   },
   {
@@ -35,6 +35,14 @@ const spdMenus = [
     description: "Gunakan transportasi umum (Kereta, Pesawat, dll).",
     icon: Train,
     href: "/form-perjalanan-dinas/tsp-umum",
+    color: "secondary" as const,
+    buttonText: "Buka Form"
+  },
+  {
+    title: "Canvassing Claim",
+    description: "Ajukan klaim untuk kegiatan canvassing.",
+    icon: Building2,
+    href: "/form-perjalanan-dinas/canvassing-claim",
     color: "primary" as const,
     buttonText: "Buka Form"
   },

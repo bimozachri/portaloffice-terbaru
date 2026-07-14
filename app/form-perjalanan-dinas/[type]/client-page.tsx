@@ -13,6 +13,7 @@ const GAS_URLS: Record<string, string> = {
   "mobil-pribadi": "https://script.google.com/macros/s/AKfycbwffpsh2CFXI_QcNQZmTP4RfKQvPUwZzSPZv2JL8JltsW93PQO0UxkvyojHwzJBSto/exec",
   "motor-pribadi": "https://script.google.com/macros/s/AKfycbxMU7r-PkjhiQ9PugyoP3Hyarpt7sf8esyVLhseD531_REi7SEKDw0Zwp5mVZ6Nu5Dp/exec",
   "tsp-umum": "https://script.google.com/macros/s/AKfycbz0nugRS_lemYNWVhI5zjY-nsGMtAfs7_TILCH4k1StGzw2rAvhYGSYSgFtWvbl7e3S/exec",
+  "canvassing-claim": "https://script.google.com/macros/s/AKfycbzSyxUg_43-caIpX4qowfitpiqUEjBg8t38i5bSiYG0hK_WJS1H8-yHiszZ8lcRSyA/exec",
 };
 
 interface ClientPageProps {

@@ -6,6 +6,7 @@ const URL_KEYS = [
   "mobil-pribadi",
   "motor-pribadi",
   "tsp-umum",
+  "canvassing-claim",
 ];
 
 export function generateStaticParams() {
