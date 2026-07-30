@@ -9,9 +9,10 @@ import { ThemeToggle } from "@/components/theme-toggle"
 const layananDropdown = [
   { name: "Form Absensi Digital", href: "/absensi-digital" },
   { name: "Form Pengajuan No. Surat", href: "/form-pengajuan-no-surat" },
-  { name: "Form Klaim Operasional", href: "/form-klaim-operasional" },
-  { name: "Form Perjalanan Dinas", href: "/form-perjalanan-dinas" },
-  { name: "ABAF Integrated", href: "/abaf-integrated" },
+  // { name: "Form Klaim Operasional", href: "/form-klaim-operasional" },
+  // { name: "Form Perjalanan Dinas", href: "/form-perjalanan-dinas" },
+  { name: "ABAF Claim Integrated", href: "/abaf-integrated" },
+  { name: "Dashboard HR", href: "/dashboard-hr" },
   { name: "Form Lembur", href: "/form-lembur" },
   { name: "Form Pengajuan Cuti", href: "/form-pengajuan-cuti" },
   { name: "Form Izin Sakit", href: "/form-izin-sakit" },

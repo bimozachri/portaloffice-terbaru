@@ -12,7 +12,7 @@ const spdMenus = [
     icon: Building2,
     href: "/form-perjalanan-dinas/kendaraan-kantor",
     color: "primary" as const,
-    buttonText: "Buka Form"
+    buttonText: "Buka Form",
   },
   {
     title: "SPD Mobil Pribadi",
@@ -20,7 +20,7 @@ const spdMenus = [
     icon: Car,
     href: "/form-perjalanan-dinas/mobil-pribadi",
     color: "secondary" as const,
-    buttonText: "Buka Form"
+    buttonText: "Buka Form",
   },
   {
     title: "SPD Motor Pribadi",
@@ -28,7 +28,7 @@ const spdMenus = [
     icon: Bike,
     href: "/form-perjalanan-dinas/motor-pribadi",
     color: "primary" as const,
-    buttonText: "Buka Form"
+    buttonText: "Buka Form",
   },
   {
     title: "SPD Transportasi Umum",
@@ -36,7 +36,7 @@ const spdMenus = [
     icon: Train,
     href: "/form-perjalanan-dinas/tsp-umum",
     color: "secondary" as const,
-    buttonText: "Buka Form"
+    buttonText: "Buka Form",
   },
   {
     title: "Canvassing Claim",
@@ -44,7 +44,7 @@ const spdMenus = [
     icon: Building2,
     href: "/form-perjalanan-dinas/canvassing-claim",
     color: "primary" as const,
-    buttonText: "Buka Form"
+    buttonText: "Buka Form",
   },
 ];
 

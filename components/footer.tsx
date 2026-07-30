@@ -44,7 +44,7 @@ export function Footer() {
                   Form Pengajuan Surat
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a href="/form-klaim-operasional" className="hover:text-primary transition-colors">
                   Form Klaim Operasional
                 </a>
@@ -53,10 +53,15 @@ export function Footer() {
                 <a href="/form-perjalanan-dinas" className="hover:text-primary transition-colors">
                   Form Perjalanan Dinas
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a href="/abaf-integrated" className="hover:text-primary transition-colors">
-                  ABAF Integrated
+                  ABAF Claim Integrated
+                </a>
+              </li>
+              <li>
+                <a href="/dashboard-hr" className="hover:text-primary transition-colors">
+                  Dashboard HR
                 </a>
               </li>
               <li>

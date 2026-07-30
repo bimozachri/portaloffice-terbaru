@@ -6,7 +6,7 @@ import { ThemeToggle } from "@/components/theme-toggle";
 
 export default function HistoryClaimPage() {
   // TODO: Masukkan URL Web App Google Apps Script untuk History Claim di sini
-  const urlHistoryClaim: string = "https://script.google.com/macros/s/AKfycbwsQrSAfJtmADQp-5fis2vX5oq2l3oWorQ3C8DdwHr7ZpJgdlAO4p1s11j4MakOMrDs/exec"; 
+  const urlHistoryClaim: string = "https://script.google.com/macros/s/AKfycbzHQzSuSIOsAJIAElVIog-yFFqe27nFDXx19IWbM3lS8BC7rx5x_2ZAdtFZ9iPMlOKSkg/exec"; 
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
@@ -31,14 +31,6 @@ export default function HistoryClaimPage() {
         </div>
       </header>
 
-      {/* Page Title */}
-      <div className="bg-primary/5 border-b border-border py-4">
-        <div className="container mx-auto px-4">
-          <h1 className="text-xl md:text-2xl font-bold text-foreground">History Claim</h1>
-          <p className="text-sm text-muted-foreground">Lacak status tiket claim approval Anda di sini</p>
-        </div>
-      </div>
-
       {/* Embedded Content */}
       <div className="flex-1 w-full relative">
         {urlHistoryClaim !== "" ? (
@@ -47,13 +39,13 @@ export default function HistoryClaimPage() {
             frameBorder="0"
             width="100%"
             height="1000px"
-            title="History Claim"
+            title="ABAF Assessment"
             allow="clipboard-write; clipboard-read; autoplay"
           />
         ) : (
           <div className="absolute inset-0 flex items-center justify-center">
             <span className="text-muted-foreground font-medium bg-background px-4 py-2 rounded-lg border border-border shadow-sm">
-              Link sistem History Claim belum dikonfigurasi.
+              Link sistem ABAF Assessment belum dikonfigurasi.
             </span>
           </div>
         )}

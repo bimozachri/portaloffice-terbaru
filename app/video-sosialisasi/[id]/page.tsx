@@ -26,6 +26,11 @@ const videoData: Record<string, { title: string; youtubeId: string; description:
     youtubeId: "ShurbFukSHI",
     description: "Panduan pengisian ABAF versi 2.0 untuk manajemen surat dan arsip perusahaan.",
   },
+  "sosialisasi-abaf-integrated": {
+    title: "Sosialisasi ABAF Integrated",
+    youtubeId: "mmNQq87gAhw",
+    description: "Panduan lengkap cara menggunakan ABAF Integrated untuk claim karyawan.",
+  },
 };
 
 export default async function VideoPage({ params }: { params: Promise<{ id: string }> }) {

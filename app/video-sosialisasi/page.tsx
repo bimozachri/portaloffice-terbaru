@@ -7,6 +7,14 @@ import Image from "next/image";
 // 1. Update Data Video dengan properti 'date' dan 'isoDate' (untuk sorting)
 const videos = [
   {
+    id: "sosialisasi-abaf-integrated",
+    title: "Sosialisasi ABAF Integrated",
+    description: "Panduan lengkap cara menggunakan ABAF Integrated untuk claim karyawan.",
+    thumbnail: "/images/forms/abaf-logo.png",
+    date: "15 Juli 2026",
+    isoDate: "2026-07-15",
+  },
+  {
     id: "sosialisasi-abaf-2",
     title: "Sosialisasi Pengisian ABAF 2.0 - Manajemen Surat & Arsip",
     description: "Panduan pengisian ABAF versi 2.0 untuk manajemen surat dan arsip perusahaan.",
