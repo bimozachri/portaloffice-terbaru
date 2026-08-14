@@ -17,9 +17,9 @@ const announcementsData: Announcement[] = [
   {
     id: "1",
     title: "PEMBERITAHUAN",
-    date: "24 Juli 2026",
+    date: "10 AGUSTUS 2026",
     type: "info",
-    message: `Jika ada error atau tidak bisa akses, coba hapus cache browser atau gunakan mode incognito. Jika masih tidak bisa, hubungi admin IT.`,
+    message: `NEW UPDATE!!!\nUntuk Pengajuan Cuti, Lembur, dan Izin Sakit, Bisa Diakses Melalui ABHRS (Angsae Baru Human Resource System) di Portal Angsae Baru.`,
     active: true, 
   },
   {
@@ -64,21 +64,33 @@ export function Announcements() {
         return (
           <div className="relative mt-0.5 flex h-5 w-5 items-center justify-center shrink-0">
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-400 opacity-60"></span>
-            <AlertTriangle className="relative h-5 w-5 text-red-600" />
+            <AlertTriangle className="relative h-5 w-5 text-red-600 dark:text-red-500" />
           </div>
         )
-      case "warning": return <Bell className="h-5 w-5 text-yellow-600 shrink-0 mt-0.5" />
-      case "event": return <Calendar className="h-5 w-5 text-blue-600 shrink-0 mt-0.5" />
-      default: return <Info className="h-5 w-5 text-gray-500 shrink-0 mt-0.5" />
+      case "warning": 
+        return <Bell className="h-5 w-5 text-yellow-600 dark:text-yellow-500 shrink-0 mt-0.5" />
+      case "event": 
+        return <Calendar className="h-5 w-5 text-blue-600 dark:text-blue-500 shrink-0 mt-0.5" />
+      case "info": 
+        return (
+          // Memberikan efek cahaya berdenyut (pulse) halus pada ikon info
+          <div className="relative mt-0.5 flex h-5 w-5 items-center justify-center shrink-0">
+            <span className="absolute inline-flex h-full w-full animate-pulse rounded-full bg-sky-400 opacity-40 dark:opacity-20"></span>
+            <Info className="relative h-5 w-5 text-sky-600 dark:text-sky-400" />
+          </div>
+        )
+      default: 
+        return <Info className="h-5 w-5 text-gray-500 shrink-0 mt-0.5" />
     }
   }
 
-  // Helper Warna Latar & Border
+  // Helper Warna Latar & Border (Support Dark Mode)
   const getCardStyle = (type: string) => {
     switch (type) {
-      case "urgent": return "bg-red-50/80 border-red-200 border-l-red-500 hover:bg-red-100/80"
-      case "warning": return "bg-yellow-50/80 border-yellow-200 border-l-yellow-500 hover:bg-yellow-100/80"
-      case "event": return "bg-blue-50/80 border-blue-200 border-l-blue-500 hover:bg-blue-100/80"
+      case "urgent": return "bg-red-50/80 dark:bg-red-950/30 border-red-200 dark:border-red-900 border-l-red-500 hover:bg-red-100/80 dark:hover:bg-red-900/40"
+      case "warning": return "bg-yellow-50/80 dark:bg-yellow-950/30 border-yellow-200 dark:border-yellow-900 border-l-yellow-500 hover:bg-yellow-100/80 dark:hover:bg-yellow-900/40"
+      case "event": return "bg-blue-50/80 dark:bg-blue-950/30 border-blue-200 dark:border-blue-900 border-l-blue-500 hover:bg-blue-100/80 dark:hover:bg-blue-900/40"
+      case "info": return "bg-sky-50/90 dark:bg-sky-950/30 border-sky-200 dark:border-sky-900 border-l-sky-500 hover:bg-sky-100 dark:hover:bg-sky-900/50 shadow-sm shadow-sky-100 dark:shadow-none"
       default: return "bg-card border-border border-l-gray-300 hover:bg-accent/50"
     }
   }
@@ -86,9 +98,10 @@ export function Announcements() {
   // Helper Warna Teks Judul
   const getTitleStyle = (type: string) => {
     switch (type) {
-      case "urgent": return "text-red-800"
-      case "warning": return "text-yellow-800"
-      case "event": return "text-blue-800"
+      case "urgent": return "text-red-800 dark:text-red-200"
+      case "warning": return "text-yellow-800 dark:text-yellow-200"
+      case "event": return "text-blue-800 dark:text-blue-200"
+      case "info": return "text-sky-900 dark:text-sky-100"
       default: return "text-foreground"
     }
   }
@@ -96,9 +109,10 @@ export function Announcements() {
   // Helper Warna Teks Pesan
   const getMessageStyle = (type: string) => {
     switch (type) {
-      case "urgent": return "text-red-700/90 font-medium"
-      case "warning": return "text-yellow-700/90"
-      case "event": return "text-blue-700/90"
+      case "urgent": return "text-red-700/90 dark:text-red-300/90 font-medium"
+      case "warning": return "text-yellow-700/90 dark:text-yellow-300/90"
+      case "event": return "text-blue-700/90 dark:text-blue-300/90"
+      case "info": return "text-sky-800 dark:text-sky-200 font-medium" // Lebih tebal dan kontras
       default: return "text-muted-foreground"
     }
   }
@@ -106,9 +120,10 @@ export function Announcements() {
   // Helper Warna Badge Tanggal
   const getDateStyle = (type: string) => {
     switch (type) {
-      case "urgent": return "text-red-700 bg-red-100/80 border-red-200"
-      case "warning": return "text-yellow-700 bg-yellow-100/80 border-yellow-200"
-      case "event": return "text-blue-700 bg-blue-100/80 border-blue-200"
+      case "urgent": return "text-red-700 dark:text-red-300 bg-red-100/80 dark:bg-red-900/50 border-red-200 dark:border-red-800"
+      case "warning": return "text-yellow-700 dark:text-yellow-300 bg-yellow-100/80 dark:bg-yellow-900/50 border-yellow-200 dark:border-yellow-800"
+      case "event": return "text-blue-700 dark:text-blue-300 bg-blue-100/80 dark:bg-blue-900/50 border-blue-200 dark:border-blue-800"
+      case "info": return "text-sky-700 dark:text-sky-300 bg-sky-100 dark:bg-sky-900/60 border-sky-200 dark:border-sky-800"
       default: return "text-muted-foreground bg-muted border-transparent"
     }
   }
@@ -124,7 +139,6 @@ export function Announcements() {
 
         <CardHeader className="pb-3 relative z-10">
           <div className="flex items-center gap-2">
-            {/* Lonceng utama berkedip merah jika ada peringatan urgent */}
             <Bell className={`h-5 w-5 ${hasUrgentAnnouncement ? 'text-red-500 animate-pulse' : 'text-primary'}`} />
             <CardTitle className="text-xl font-bold">Papan Pengumuman</CardTitle>
           </div>
@@ -134,7 +148,7 @@ export function Announcements() {
           {activeAnnouncements.map((item) => (
             <div
               key={item.id}
-              className={`relative flex flex-col gap-2 rounded-lg border border-l-4 p-4 sm:p-5 shadow-sm transition-all ${getCardStyle(item.type)}`}
+              className={`relative flex flex-col gap-2 rounded-lg border border-l-4 p-4 sm:p-5 transition-all ${getCardStyle(item.type)}`}
             >
               
               {/* Header Card (Ikon, Judul, Tanggal) */}
@@ -151,10 +165,21 @@ export function Announcements() {
                 </span>
               </div>
               
-              {/* Isi Pesan */}
-              <p className={`text-sm leading-relaxed whitespace-pre-line mt-1 sm:ml-8 ${getMessageStyle(item.type)}`}>
-                {item.message}
-              </p>
+              {/* Isi Pesan dengan auto-deteksi kalimat tebal */}
+              <div className={`text-sm leading-relaxed mt-1 sm:ml-8 ${getMessageStyle(item.type)}`}>
+                {item.message.split('\n').map((line, index) => {
+                  // Trik sakti: Jika sebaris teks ada kata "!!!" atau "UPDATE", otomatis ditebalkan!
+                  const isHighlight = line.includes('!!!') || line.includes('UPDATE');
+                  return (
+                    <span 
+                      key={index} 
+                      className={isHighlight ? "font-bold block mb-1.5 text-[15px]" : "block"}
+                    >
+                      {line}
+                    </span>
+                  )
+                })}
+              </div>
               
             </div>
           ))}
