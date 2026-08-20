@@ -143,15 +143,15 @@ const services = [
     color: "secondary" as const,
     gradient: "bg-gradient-to-br from-white to-blue-50/80 hover:from-blue-50/80 hover:to-blue-100/60 dark:from-slate-900 dark:to-blue-950/30 border-blue-100/50",
   },
-  {
-    title: "Dezavasi's Sales Form App",
-    description: "Form untuk menambah data customer baru dan mengelola informasi penjualan perusahaan.",
-    icon: ShoppingCart,
-    buttonText: "Isi Form",
-    href: "https://docs.google.com/forms/d/e/1FAIpQLSewbtzCYbBgxQfgmeRme2QKK4e42m9ePhpEf25Q6MlHBB85JQ/viewform",
-    color: "accent" as const,
-    gradient: "bg-gradient-to-br from-white to-blue-50/80 hover:from-blue-50/80 hover:to-blue-100/60 dark:from-slate-900 dark:to-blue-950/30 border-blue-100/50",
-  },
+  // {
+  //   title: "Dezavasi's Sales Form App",
+  //   description: "Form untuk menambah data customer baru dan mengelola informasi penjualan perusahaan.",
+  //   icon: ShoppingCart,
+  //   buttonText: "Isi Form",
+  //   href: "https://docs.google.com/forms/d/e/1FAIpQLSewbtzCYbBgxQfgmeRme2QKK4e42m9ePhpEf25Q6MlHBB85JQ/viewform",
+  //   color: "accent" as const,
+  //   gradient: "bg-gradient-to-br from-white to-blue-50/80 hover:from-blue-50/80 hover:to-blue-100/60 dark:from-slate-900 dark:to-blue-950/30 border-blue-100/50",
+  // },
 ];
 
 // 1. KITA BUAT KOMPONEN KARTU KHUSUS DI SINI AGAR TIDAK MENGGANGGU FILE LAIN
