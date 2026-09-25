@@ -1,12 +1,19 @@
-/** @type {import('next').NextConfig} */
+/** @type {import("next").NextConfig} */
 const nextConfig = {
-  output: "export",
-
-  // Baris penting agar refresh tidak error 403 di Hostinger
-  trailingSlash: true,
-
-  // Konfigurasi gambar (wajib untuk export statis)
-  images: { unoptimized: true },
+  async headers() {
+    return [
+      {
+        source: "/satset/:path*",
+        headers: [
+          {
+            key: "Permissions-Policy",
+            value:
+              'geolocation=(self "https://script.google.com" "https://script.googleusercontent.com"), camera=(self "https://script.google.com" "https://script.googleusercontent.com"), microphone=(self "https://script.google.com" "https://script.googleusercontent.com")',
+          },
+        ],
+      },
+    ];
+  },
 };
 
 export default nextConfig;
