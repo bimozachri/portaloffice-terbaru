@@ -16,11 +16,11 @@ type Announcement = {
 const announcementsData: Announcement[] = [
   {
     id: "1",
-    title: "PEMBERITAHUAN",
-    date: "10 AGUSTUS 2026",
+    title: "PRATINJAU APLIKASI SATSET",
+    date: "15 SEPTEMBER 2026",
     type: "info",
-    message: `NEW UPDATE!!!\nUntuk Pengajuan Cuti, Lembur, dan Izin Sakit, Bisa Diakses Melalui ABHRS (Angsae Baru Human Resource System) di Portal Angsae Baru.`,
-    active: true, 
+    message: `NEW UPDATE!!!\nMenu baru Satset (Sales Management App) kini tersedia di Portal Office untuk membantu tim Sales mengelola pipeline, proposal, dan aktivitas pelanggan.\n\nSaat ini aplikasi masih dalam tahap uji coba terbatas (Private Preview). Silakan gunakan password yang telah diinformasikan untuk mengaksesnya.`,
+    active: true,
   },
   {
     id: "2",

@@ -7,16 +7,12 @@ import { Announcements } from "@/components/announcements"
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col bg-background">
+    <div className="min-h-screen bg-background">
       <Header />
-      <main className="flex-1">
-        <HeroSection />
-        
-        <Announcements />
-        
-        <ServicesGrid />
-      </main>
+      <HeroSection />
+      <Announcements />
+      <ServicesGrid />
       <Footer />
     </div>
-  )
+  );
 }

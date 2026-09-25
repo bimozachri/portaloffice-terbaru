@@ -3,7 +3,8 @@ import type { Metadata } from "next"
 import { Inter, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
-import { ThemeProvider } from "@/components/theme-provider" // <--- IMPORT INI
+import { ThemeProvider } from "@/components/theme-provider"
+import { UpdatePopup } from "@/components/update-popup" // <--- 1. TAMBAH IMPORT INI
 
 const _inter = Inter({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
@@ -35,6 +36,10 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
+          
+          {/* 2. TAMBAHKAN POP-UP DI SINI AGAR AKTIF GLOBAL */}
+          <UpdatePopup />
+          
           {children}
           <Analytics />
         </ThemeProvider>

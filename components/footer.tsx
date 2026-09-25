@@ -65,23 +65,18 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/form-lembur" className="hover:text-primary transition-colors">
-                  Form Lembur
+                <a href="/abos" className="hover:text-primary transition-colors">
+                  ABOS
                 </a>
               </li>
               <li>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdeO6fNTDfSp7Gm8v4hTjCsNItfkqL0I18eCkuc8gr2KitR8A/viewform" className="hover:text-primary transition-colors">
-                  Form Pengajuan Cuti
+                <a href="/pcm" className="hover:text-primary transition-colors">
+                  PCM
                 </a>
               </li>
               <li>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdf5xaPhmA-UP1QQ-jFTZhGqc_KHh644utBIkzQwumWiLoIEQ/viewform" className="hover:text-primary transition-colors">
-                  Form Izin Sakit
-                </a>
-              </li>
-              <li>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSewbtzCYbBgxQfgmeRme2QKK4e42m9ePhpEf25Q6MlHBB85JQ/viewform" className="hover:text-primary transition-colors">
-                  Dezavasi{"'"}s Sales Form
+                <a href="/satset" className="hover:text-primary transition-colors">
+                  SATSET
                 </a>
               </li>
               <li>

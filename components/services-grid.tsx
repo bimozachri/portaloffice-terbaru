@@ -18,6 +18,7 @@ import {
   Users,
   Wallet,
   ArrowRight,
+  Target,
   type LucideIcon,
 } from "lucide-react";
 import { Input } from "@/components/ui/input";
@@ -81,14 +82,23 @@ const services = [
     gradient: "bg-gradient-to-br from-white to-blue-50/80 hover:from-blue-50/80 hover:to-blue-100/60 dark:from-slate-900 dark:to-blue-950/30 border-blue-100/50",
   },
   {
-    title: "ABAF Assessment",
-    description: "Sistem penilaian dan evaluasi kinerja karyawan.",
-    icon: Layers,
-    buttonText: "Isi Form",
-    href: "/abaf-assessment",
+    title: "Satset",
+    description: "Aplikasi untuk mengelola pipeline, menyusun proposal awal, dan mencatat aktivitas sales.",
+    icon: Target,
+    buttonText: "Buka Satset",
+    href: "/satset",
     color: "secondary" as const,
-    gradient: "bg-gradient-to-br from-sky-50/90 to-blue-50/50 hover:from-sky-100/90 hover:to-blue-100/50 dark:from-sky-950/40 dark:to-blue-950/20 border-sky-100/50",
+    gradient: "bg-gradient-to-br from-white to-blue-50/80 hover:from-blue-50/80 hover:to-blue-100/60 dark:from-slate-900 dark:to-blue-950/30 border-blue-100/50",
   },
+  // {
+  //   title: "ABAF Assessment",
+  //   description: "Sistem penilaian dan evaluasi kinerja karyawan.",
+  //   icon: Layers,
+  //   buttonText: "Isi Form",
+  //   href: "/abaf-assessment",
+  //   color: "secondary" as const,
+  //   gradient: "bg-gradient-to-br from-sky-50/90 to-blue-50/50 hover:from-sky-100/90 hover:to-blue-100/50 dark:from-sky-950/40 dark:to-blue-950/20 border-sky-100/50",
+  // },
   // {
   //   title: "Form Lembur",
   //   description: "Menu pengajuan lembur baru dan pengecekan riwayat lembur karyawan.",
