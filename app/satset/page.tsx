@@ -14,7 +14,7 @@ import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 const SATSET_URL =
-  "https://script.google.com/macros/s/AKfycbx7sNOIictCtxihivdjGCYE0qMjuWCa9RVNDHWzsmUJfw6mtkHhRpRoWzjgYoD7NTAa/exec";
+  "https://script.google.com/macros/s/AKfycbwHaKljf8amWhPvDTfF3xJ_a1n-oa-HmsUrd27Xwzw67LA5nlNKufISRhULBVgqDE_j/exec";
 
 export default function SatsetPage() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -159,7 +159,8 @@ export default function SatsetPage() {
               src={SATSET_URL}
               title="SATSET Web App"
               className="block h-full w-full border-0"
-              allow="geolocation *; camera *; microphone *; clipboard-read *; clipboard-write *; autoplay *"
+              // Hapus tanda bintang (*), gunakan format standar berikut untuk kompatibilitas maksimal:
+              allow="camera; geolocation; microphone; clipboard-read; clipboard-write; autoplay"
               allowFullScreen
               onLoad={() => setIframeLoaded(true)}
             />
