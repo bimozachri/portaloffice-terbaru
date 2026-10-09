@@ -24,12 +24,6 @@ export default function AbosPage() {
 
             <div className="flex items-center gap-2">
               <ThemeToggle />
-              <Button asChild variant="outline" size="sm">
-                <Link href="/" className="flex items-center gap-2">
-                  <ArrowLeft className="h-4 w-4" />
-                  <span className="hidden sm:inline">Kembali ke Portal</span>
-                </Link>
-              </Button>
             </div>
           </div>
         </header>
